@@ -1,5 +1,3 @@
-/* -----------------------------------Global */
-
 /* Colors
 - Bright Blue: hsl(224, 93%, 58%) #3065F8
 - Moderate Cyan Blue green: hsl(170, 45%, 43%) #3C9F8F
@@ -11,50 +9,34 @@
 
 Very Dark Blue: hsl(243, 87%, 12%) #070439 footer
 - Desaturated Blue: hsl(238, 22%, 44%) #585989 footer above
-
-
-
 */
 
+/* Global */
 html {
     box-sizing: border-box;
 }
-
 *,*:before,*:after {
     box-sizing: inherit;
 }
-
 * {
     font-size: 17px;
 }
 body {
-    /* background: black; */
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
-
-.allcontainer {
-    width: 94%;
-    margin-left: 79px;
-    margin-top: 2.5em;
-    margin-right: 79px;
-
-}
 h1 {
-
-        font-size: 32px;
+    font-size: 32px;
 }
 h1, h2, a {
     font-family: 'Raleway', sans-serif;
 }
 li {
-    /* background: pink; */
     list-style: none;  
 }
-
 a {
     text-decoration: none;
     color: #F6F6FE;
@@ -66,140 +48,57 @@ a {
 .btn {
     background: #3065F8;
     border-radius: 4.5px;
-    padding: 13px 12px;
     filter: drop-shadow( 0px 1px 8px #304FA6);
 }
 .input {
     border-radius: 4.5px;
 }
-/* ------------------------------------------------------Header */
-.bgimgtop {
-    background-image: url(images/illustration-1.svg);
 
-width: 100%;
-
-max-width: 630px;
-
-height: 469px;
-
-position: absolute;
-
-background-repeat: no-repeat;
-
-background-size: contain;
-
-right: 82px;
-
-z-index: -100;
-}
-header {
-    padding: 65px 79px 0 79px;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end; 
-}
+/* Header */
 nav a {
     color: black;
     font-size: 16.5px;
 }
-li {
-    display: inline-block;
-    padding: 0 1.5em;
-
-}
-/* .flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-} */
-
-/* ---------------------------------------------------------main */
-/* -----------------------------------------------------info top */
-.startedgrid {
-    display: grid;
-    grid-column-gap: 0.7em;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(1, 1fr);
-}
-.infogrid {
-    padding-bottom: -30em;
-    display: grid;
-    grid-column-gap: 10em;
-    /* grid-row-gap: 8em; */
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: 
-                        "one two"
-                        "three four"
-                        "five six"
-                        "seven eight"
-    ;
-}
-.infotop {
-    grid-area: one;
-    margin-top: 100px;
-}
-
-/* -----------------------------------------------------info bottom */
-.bgimgbottom {
+.cta-2-img {
     background-image: url(images/illustration-2.svg);
-
     width: 100%;
-    
     max-width: 541px;
-    
     height: 406px;
-    
     background-repeat: no-repeat;
-    
     top: 1041px;
-    
     position: absolute;
-    
     z-index: -100;
-    
     background-size: contain;
-    
     right: 82px;
 }
-.access {
-    grid-area: seven;
-    align-self: end;
-    margin-bottom: 88px;
-}
-.access h1, .access p {
-    color: white;
-}
-.access-bg {
-    background: #585989;
-    background-color: #585989;
-    height: 323px;
-    width: 100%;
-    position: absolute;
-    z-index: -1000;
-    bottom: 0;
-    left: 0;
-    top: 2091px;
-}
-.infobottom {
-    grid-area: five;
-    margin-top: -70px;
-}
-.underline {
+
+/* CTA 2 */
+.cta-2 a {
     color:#3C9F8F ;
     border-bottom: 1px solid #3C9F8F ;
     padding-bottom: 3px;
     float: left;
 }
-.arrow {
-    display: inline-block;
-    padding-top: 5px;
-    padding-left: 4px;
+.cta-2 a::after {
+    content: url(images/icon-arrow.svg);
+    width: 10px;
+    height: 10px;
 }
+
+/* CTA 3 */
+.cta-3-bg {
+    background: #585989;
+        background-color: #585989;
+        width: 100%;
+        position: absolute;
+        z-index: -1000;
+        left: 0;
+}
+.cta-3 h1, .cta-3 p {
+    color: white;
+}
+
+/* Testimonial */
 .testimonial {
     margin-top: 6em;
     background: white;
@@ -213,25 +112,20 @@ li {
     line-height: 1.8em;
     margin: 0;
 }
-.quotes {
-    position: absolute;
-    left: 35px;
-    top: 27px;
+.testimonial p:first-child::before {
+        content: url(images/icon-quotes.svg);
+        width: 100%;
+        position: absolute;
+        left: 35px;
+        top: 27px;
 }
-/* .testinfoflex {
-    display: flex;
-    justify-content: space-evenly;
-} */
-.testname {
-    /* align-self: center; */
-    /* float: right; */
+.testimonial p:last-child {
     clear: right;
-    
     display: inline-block;
     padding-top: 10px;
     padding-left: 1em;
 }
-.testimonialimg {
+.testimonial-img {
     display: block;
     margin-top: 1.8em;
     border-radius: 5em;
@@ -239,68 +133,203 @@ li {
     align-self: center;
     float: left;
 }
-/* --------------------------------------------------------footer */
 
+/* footer */
 footer {
     color:#F6F6FE ;
     padding-top: 2em;
     padding-bottom: 3em;
     background-color: #070439;
+}
+
+footer a {
+    display: block;
+    padding: 1em 0;
+}
+#about li:hover {
+    color: black !important;
+}
+/* media queries */
+
+    /* Screen Sizes
+    Laptop: 1024px w
+    ipad: 768px w
+    iphone: 375px w
+    */
     
-}
-/* -----------------------------------------------------footer top */
-.freegrid {
-    grid-gap: 0.7em;
-    display: grid;
-    align-content: center;
-    grid-area: eight;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-                "one two three"
-                "four five six"
-    ;
-    align-items: center;
-}
-.fginput {
-    grid-area: four;
-
-    grid-column-start: four;
-    grid-column-end: four;
-
-    grid-column: 1 / 4;
-
-    align-self: center;
-
-    border-radius: 4.5px;
-
-    padding: 13px;
-
-    margin-bottom: 130px;
-
-    margin-right: 123px;
-}
-.fgbutton {
-    grid-area: four;
-    align-self: center;
-    grid-column: 1/3;
-
-    margin-right: 140px;
-}
-
-/* -----------------------------------------------------grid bottom */
-
-.gridbottom {
-    display: grid;
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-
-}
-
-/* --------------------------------media queries */
-
-@media screen and (max-width: 375px) {
+/* Screens 375px and up */
+@media screen and (min-width: 375px) {
+    /* Header */
     header {
         padding: 31px 39px 0 39px;
+        text-align: center;
+    }
+    li {
+        list-style: none;
+        text-align: center;
+    }
+    .logo {
+        margin-left: -2.5em;
+    }
+    .cta-1 {
+            margin: 6em 0;
     }
 }
+/* Screens 375px and down */
+@media screen and (max-width: 375px) {
+    .testimonial {
+        width: 17em;
+    }
+    .cta-3-bg {
+        top: 1490px;
+        height: 388px;
+    }
+    .cta-3 {
+        padding-top: 4em;
+    }
+    .form-2 {
+        padding-bottom: 3em;
+    }
+}
+/* Screens 640px and up */
+    @media screen and (min-width: 640px) {
+        /* Header */
+        header {
+            padding: 65px 79px 0 79px;
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end; 
+        }
+        li {
+            display: inline-block;
+            padding: 0 1.5em;
+        }
+        .hero-img {
+            right: 82px;
+        }
+    }
+/* Screens 768px and up */
+@media screen and (min-width: 768px) {
+    header {
+        padding: 31px 39px 0 39px;
+        text-align: center;
+    }
+    .cta-3-bg {
+        height: 543px;
+        bottom: 0;
+        top: 1016.5px;
+    }
+    .cta-3 {
+        padding-top: 2em;
+    }
+    .form-2 {
+        padding-bottom: 3em;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/* Screens 768px and down */
+@media screen and (max-width: 768px) {
+    .btn {
+        padding: 6px 12px;
+    }
+    .testimonial {
+        display: inline-block;
+    }
+}
+/* Screens 1024px and up */
+@media screen and (min-width: 800px) {
+    .hero-img {
+        background-image: url(images/illustration-1.svg);
+        width: 100%;
+        max-width: 630px;
+        height: 469px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: -100;
+    }
+    .btn {
+        padding: 13px 12px;
+    }
+    .home-grid {
+        padding-bottom: -30em;
+        display: grid;
+        grid-column-gap: 10em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            "one two"
+            "three four"
+            "five six"
+            "seven eight";
+    }
+    .cta-1 {
+        grid-area: one;
+        margin-top: 100px;
+    }
+    .form-1 {
+        display: grid;
+        grid-column-gap: 0.7em;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(1, 1fr);
+    }
+    .cta-2 {
+        grid-area: five;
+        margin-top: -81px;
+    }
+    .cta-3-bg {
+        max-height: 323px;
+        bottom: 0;
+        top: 1841.5px;
+    }
+    .cta-3 {
+        grid-area: seven;
+        align-self: end;
+        margin-bottom: 88px;
+    }
+    .form-2 {
+        grid-gap: 0.7em;
+        display: grid;
+        align-content: center;
+        grid-area: eight;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+            "one two three"
+            "four five six";
+        align-items: center;
+    }
+    .form-2-input {
+        grid-area: four;
+        grid-column-start: four;
+        grid-column-end: four;
+        grid-column: 1 / 4;
+        align-self: center;
+        border-radius: 4.5px;
+        padding: 13px;
+        margin-bottom: 130px;
+        margin-right: 123px;
+    }
+    .fgbutton {
+        grid-area: four;
+        align-self: center;
+        grid-column: 1/3;
+        margin-right: 140px;
+    }
+}
+/* screens 1440px and down */
+@media screen and (max-width: 1440px) {
+        /* global */
+        .container {
+            padding: 0 39px;
+        }
+}
+
+
