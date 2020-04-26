@@ -61,15 +61,12 @@ nav a {
 }
 .cta-2-img {
     background-image: url(images/illustration-2.svg);
-    width: 100%;
-    max-width: 541px;
-    height: 406px;
-    background-repeat: no-repeat;
-    top: 1041px;
     position: absolute;
+    width: 100%;
     z-index: -100;
+    background-repeat: no-repeat;
     background-size: contain;
-    right: 82px;
+    max-width: 541px;
 }
 
 /* CTA 2 */
@@ -85,19 +82,21 @@ nav a {
     height: 10px;
 }
 
-/* CTA 3 */
+/* CTA 3
 .cta-3-bg {
-    background: #585989;
         background-color: #585989;
-        width: 100%;
-        position: absolute;
+        width: 100vw;
+        height: 20em;
         z-index: -1000;
         left: 0;
-}
+} */
 .cta-3 h1, .cta-3 p {
     color: white;
 }
-
+/* .cta-3 {
+    background-color: #585989;
+    width: 100%;
+} */
 /* Testimonial */
 .testimonial {
     margin-top: 6em;
@@ -180,10 +179,15 @@ footer a {
     .testimonial {
         width: 17em;
     }
-    .cta-3-bg {
+    .cta-2-img {
+        height: 396px;
+        top: 951px;
+        right: -11px;
+    }
+    /* .cta-3-bg {
         top: 1490px;
         height: 388px;
-    }
+    } */
     .cta-3 {
         padding-top: 4em;
     }
@@ -217,11 +221,16 @@ footer a {
         padding: 31px 39px 0 39px;
         text-align: center;
     }
-    .cta-3-bg {
+    .cta-2-img {
+        height: 406px;
+        top: 641px;
+        right: 82px;
+    }
+    /* .cta-3-bg {
         height: 543px;
         bottom: 0;
         top: 1016.5px;
-    }
+    } */
     .cta-3 {
         padding-top: 2em;
     }
@@ -243,7 +252,7 @@ footer a {
         display: inline-block;
     }
 }
-/* Screens 1024px and up */
+/* Screens 800px and up */
 @media screen and (min-width: 800px) {
     .hero-img {
         background-image: url(images/illustration-1.svg);
@@ -284,10 +293,10 @@ footer a {
         grid-area: five;
         margin-top: -81px;
     }
-    .cta-3-bg {
-        max-height: 323px;
-        bottom: 0;
-        top: 1841.5px;
+    .cta-2-img {
+        height: 406px;
+        top: 1041px;
+        right: 82px;
     }
     .cta-3 {
         grid-area: seven;
