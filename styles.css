@@ -21,6 +21,12 @@ html {
 * {
     font-size: 17px;
 }
+.float-right {
+    float: right;
+}
+input {
+    width: 100%;
+}
 body {
     margin: 0;
     padding: 0;
@@ -172,7 +178,13 @@ footer a {
     }
 }
 /* Screens 375px and down */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
+    .btn {
+        margin-top: 1em;
+    }
+    .container {
+        padding: 0 39px;
+    }
     .testimonial {
         width: 17em;
     }
@@ -214,6 +226,9 @@ footer a {
     }
 /* Screens 768px and up */
 @media screen and (min-width: 768px) {
+    .container {
+        padding: 0 79px;
+    }
     .col-wide {
         width: 70%;
         float: left;
@@ -246,9 +261,6 @@ footer a {
 }
 /* Screens 768px and down */
 @media screen and (max-width: 768px) {
-    .btn {
-        padding: 6px 12px;
-    }
     .testimonial {
         display: inline-block;
     }
@@ -258,9 +270,6 @@ footer a {
 }
 /* Screens 800px and up */
 @media screen and (min-width: 800px) {
-    .btn {
-        padding: 13px 12px;
-    }
     .hero-img {
         background-image: url(images/illustration-1.svg);
         width: 100%;
@@ -286,12 +295,10 @@ footer a {
     .cta-1 {
         grid-area: one;
         margin-top: 100px;
+        width: 476px;
     }
     .form-1 {
-        display: grid;
-        grid-column-gap: 0.7em;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: repeat(1, 1fr);
+        width: inherit;
     }
     .cta-2 {
         grid-area: five;
@@ -306,14 +313,12 @@ footer a {
         grid-area: seven;
         align-self: end;
     }
-    .form-2 {
-        float: right;
-    }
 }
 /* screens 1440px and down */
 @media screen and (max-width: 1440px) {
         /* global */
-        .container {
-            padding: 0 39px;
+            
+        .btn {
+            padding: 6px 12px;
         }
     }
